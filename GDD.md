@@ -6,6 +6,10 @@
 
 
 
+
+
+
+
 \### Incentivos de Gameplay
 
 
@@ -24,6 +28,8 @@
 
 \## Gameplay
 
+
+
 \### Objetivo del juego
 
 
@@ -34,7 +40,7 @@ Para conseguir este objetivo ha de haberse mantenido cumpliendo otros objetivos 
 
 
 
-\*Corto plazo:\* Llegar a la siguiente plataforma lugar de descanso.
+\*Corto plazo:\* Llegar a la siguiente plataforma o lugar de descanso.
 
 
 
@@ -162,6 +168,8 @@ Al impactar en una superficie "impactable", la cuerda atada a la flecha se tensa
 
 \## Mundo del juego
 
+El mundo del juego es un mundo de ambientación medieval.
+
 
 
 \## Interfaz
@@ -185,6 +193,8 @@ Al impactar en una superficie "impactable", la cuerda atada a la flecha se tensa
 
 
 \### Arte 
+
+Los fondos del nivel están hechos a acuarela, mientras que los elementos del nivel y los personajes están dibujados, editados y animados a mano en digital.
 
 
 
