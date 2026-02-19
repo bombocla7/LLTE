@@ -194,7 +194,7 @@ El único elemento de la HUD es el tiempo transcurrido desde que se comenzó la 
 
 -Menú de pausa: dos, continuar y salir al menú principal
 
--Menú de estadísticas (menú final): tres, tiempo, número de lanzamientos y puntuación (en función de las anteriores)
+-Menú de estadísticas (menú final): tres, tiempo, número de lanzamientos y puntuación (en función de las anteriores) (y créditos además)
 
 
 
@@ -210,9 +210,19 @@ Los fondos del nivel están hechos a acuarela, mientras que los elementos del ni
 
 \### Música
 
+Se van sumando instrumentos según se avanza en el juego, una sola canción.
+
+Primera zona y tal más silenciosa y tranquila. 
+
+Si eso canción para los créditos y menú principal.
+
 
 
 \### Efectos visuales
+
+Los elementos interactuables brillan ligeramente y destacan.
+
+
 
 
 
