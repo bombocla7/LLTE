@@ -178,13 +178,23 @@ El mundo del juego es un mundo de ambientación medieval.
 
 \### Cámara
 
+La cámara es fija en cada pantalla, viéndose toda la pantalla a la vez. Al cambiar de pantalla el jugador, la cámara sube (la mayoría de las veces, al ser vertical el mapa) y pasa a verse entera la siguiente pantalla. Lo mismo ocurre al caer el jugador entre pantallas o excepcionalmente al moverse por los lados entre pantallas. El juego no se detiene al pasar la cámara de una pantalla a otra.
+
 
 
 \### HUD
 
+El único elemento de la HUD es el tiempo transcurrido desde que se comenzó la partida. Se ubica en la esquina superior derecha y es de tamaño pequeño. No hay más HUD.
+
 
 
 \### Menús
+
+-Menú inicial: dos opciones, jugar y salir
+
+-Menú de pausa: dos, continuar y salir al menú principal
+
+-Menú de estadísticas (menú final): tres, tiempo, número de lanzamientos y puntuación (en función de las anteriores)
 
 
 
