@@ -6,7 +6,9 @@
 
 
 
+El juego está pensado para que el jugador aprenda a base de prueba y error.
 
+El ritmo del juego es relativamente lento, con pausas breves entre plataforma y plataforma.
 
 
 
@@ -14,15 +16,13 @@
 
 
 
-\### Estrategias 
+La curiosidad del jugador y la a primera vista sencillez de los obstáculos sirven de incentivo para que el jugador siga adelante. También la dificultad.
+
+Para esto es importante el hecho de que el juego sea llamativo visualmente, de manera que cuando el jugador consiga llegar a una nueva zona se vea sorprendido de alguna forma por su estética. 
 
 
 
 \*Sistemas:\*
-
-
-
-
 
 
 
@@ -34,7 +34,7 @@
 
 
 
-El juego tiene objetivos a largo y corto plazo. El objetivo del juego es conseguir escalar hasta el final del nivel. 
+El juego tiene objetivos a largo y corto plazo. El objetivo del juego es conseguir escalar hasta el final del nivel.
 
 Para conseguir este objetivo ha de haberse mantenido cumpliendo otros objetivos a corto plazo:
 
@@ -44,13 +44,13 @@ Para conseguir este objetivo ha de haberse mantenido cumpliendo otros objetivos 
 
 
 
-\### Core loop 
+\### Core loop
 
 
 
-El bucle de juego es el siguiente: 
+El bucle de juego es el siguiente:
 
-1. El jugador lanza la flecha 
+1. El jugador lanza la flecha
 2. La flecha acierta su objetivo o falla
 3. En función de si ha acertado o ha fallado, avanza hasta el siguiente obstáculo o retrocede uno o más obstáculos
 
@@ -68,13 +68,13 @@ Solo hay un personaje jugable.
 
 
 
-\*Personaje principal: \* 
+\*Personaje principal: \*
 
 Es el personaje que controla el jugador.
 
-El personaje principal no tiene nombre. 
+El personaje principal no tiene nombre.
 
-Su mecánica principal es el arco. 
+Su mecánica principal es el arco.
 
 \*\*Parámetros: \*\* Velocidad de movimiento (ud/s), Velocidad en la cuerda (ud/s), Tiempo de recuperación tras caída (s), Velocidad de caída (ud/s)
 
@@ -90,7 +90,7 @@ No existen en el juego personajes que sean estrictamente "enemigos del jugador",
 
 -Facundo
 
-Facundo es el caracol de LAG. El jugador puede interactuar con facundo al acercarse a él. Cuando interactúa con Facundo, se activa un diálogo. 
+Facundo es el caracol de LAG. El jugador puede interactuar con facundo al acercarse a él. Cuando interactúa con Facundo, se activa un diálogo.
 
 \*\*Parámetros: \*\* Diálogo, Distancia de interacción (ud)
 
@@ -98,7 +98,7 @@ Facundo es el caracol de LAG. El jugador puede interactuar con facundo al acerca
 
 -Murciégalos
 
-Oscilan de izquierda a derecha en línea recta. Colisionan con el personaje principal, y al tocarlo, el personaje principal suelta la cuerda y cae. 
+Oscilan de izquierda a derecha en línea recta. Colisionan con el personaje principal, y al tocarlo, el personaje principal suelta la cuerda y cae.
 
 \*\*Parámetros: \*\* Rango de oscilamiento (ud), Velocidad de movimiento (ud/s)
 
@@ -132,7 +132,7 @@ E: Interactuar
 
 
 
-\### Mecánicas 
+\### Mecánicas
 
 
 
@@ -140,7 +140,7 @@ E: Interactuar
 
 El jugador se puede mover en un plano bidimensional. Con las flechas ad puede moverse a la izquierda y a la derecha, como se explica en los controles, y con la barra espaciadora tiene un pequeño salto. Para poder moverse verticalmente tiene que utilizar el arco. El arco dispara una flecha con una cuerda, que al impactar se tensa y por la que escala el personaje principal a la siguiente plataforma o zona. Si el jugador no consigue clavar la flecha, ésta arrastrará al jugador con ella.
 
--Arco: 
+-Arco:
 
 El arco requiere un tiempo de carga, haciendo que la flecha salga con una potencia proporcional a la carga.
 
@@ -150,7 +150,7 @@ El arco dispara una flecha.
 
 
 
--Flecha: 
+-Flecha:
 
 La flecha sale disparada del arco en la dirección en la que estaba apuntando el jugador. La flecha se ve "afectada por la gravedad" y tiene caída. Además tiene una velocidad que va en función de la carga del arco. La flecha lleva una cuerda atada.
 
@@ -160,9 +160,9 @@ Al impactar en una superficie "impactable", la cuerda atada a la flecha se tensa
 
 
 
--Cuerda: La cuerda va "atada" a la flecha, y cuando la flecha se clava, se tensa en línea recta desde el punto de impacto hasta el jugador. Entonces, el jugador anda sobre la cuerda hasta el punto de impacto. Si la flecha falla, cuando llega al límite de su longitud arrastra al jugador en la dirección de la flecha. 
+-Cuerda: La cuerda va "atada" a la flecha, y cuando la flecha se clava, se tensa en línea recta desde el punto de impacto hasta el jugador. Entonces, el jugador anda sobre la cuerda hasta el punto de impacto. Si la flecha falla, cuando llega al límite de su longitud arrastra al jugador en la dirección de la flecha.
 
-\*\*Parámetros: \*\* Longitud máxima de la cuerda (ud) 
+\*\*Parámetros: \*\* Longitud máxima de la cuerda (ud)
 
 
 
@@ -202,7 +202,7 @@ El único elemento de la HUD es el tiempo transcurrido desde que se comenzó la 
 
 
 
-\### Arte 
+\### Arte
 
 Los fondos del nivel están hechos a acuarela, mientras que los elementos del nivel y los personajes están dibujados, editados y animados a mano en digital.
 
@@ -212,7 +212,7 @@ Los fondos del nivel están hechos a acuarela, mientras que los elementos del ni
 
 Se van sumando instrumentos según se avanza en el juego, una sola canción.
 
-Primera zona y tal más silenciosa y tranquila. 
+Primera zona y tal más silenciosa y tranquila.
 
 Si eso canción para los créditos y menú principal.
 
@@ -221,14 +221,4 @@ Si eso canción para los créditos y menú principal.
 \### Efectos visuales
 
 Los elementos interactuables brillan ligeramente y destacan.
-
-
-
-
-
-
-
-
-
-
 
