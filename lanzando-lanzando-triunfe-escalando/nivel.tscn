@@ -307,20 +307,24 @@ animations = [{
 }]
 
 [node name="Nivel" type="Node2D"]
-position = Vector2(157, 128)
 
 [node name="Plataformas" type="TileMapLayer" parent="."]
+position = Vector2(-104, 0)
 tile_map_data = PackedByteArray("AAAAAAAAAAAGAAAAAAABAAAAAAAHAAAAAAACAAAAAAAHAAAAAAADAAAAAAAHAAAAAAAEAAAAAAAHAAAAAAAFAAAAAAAHAAAAAAAGAAAAAAAHAAAAAAAIAAAAAAAHAAAAAAAJAAAAAAAHAAAAAAAKAAAAAAAHAAAAAAALAAAAAAAHAAAAAAAMAAAAAAAHAAAAAAANAAAAAAAHAAAAAAAOAAAAAAAHAAAAAAAPAAAAAAAHAAAAAAAQAAAAAAAHAAAAAAARAAAAAAAHAAAAAAASAAAAAAAHAAAAAAATAAAAAAAHAAAAAAAHAAAAAAAHAAAAAAA=")
 tile_set = SubResource("TileSet_7gdj4")
+
+[node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="Main_character" parent="." instance=ExtResource("1_h06de")]
 position = Vector2(26, -40)
 
 [node name="Arco" type="Node2D" parent="Main_character"]
-position = Vector2(0, 3)
 script = ExtResource("3_j87l1")
+max_carga = 100
 
 [node name="Arco (sprite)" type="AnimatedSprite2D" parent="Main_character/Arco"]
 position = Vector2(12, 0)
 sprite_frames = SubResource("SpriteFrames_ymy7k")
 animation = &"idle"
+
+[editable path="Main_character"]

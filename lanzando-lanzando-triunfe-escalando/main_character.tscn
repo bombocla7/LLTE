@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cbeeammrc8nj5"]
+[gd_scene load_steps=7 format=3 uid="uid://cbeeammrc8nj5"]
 
 [ext_resource type="Script" uid="uid://bp42h3a4bqq01" path="res://main_character.gd" id="1_2q423"]
 [ext_resource type="Texture2D" uid="uid://7fbewit46go4" path="res://Assets/End (Idle).png" id="2_8yqgs"]
@@ -32,10 +32,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_u3evn"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_5q0wt"]
-radius = 9.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2q423"]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_2q423")
@@ -45,9 +42,4 @@ sprite_frames = SubResource("SpriteFrames_wcpx6")
 animation = &"jump"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_u3evn")
-
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("CircleShape2D_5q0wt")
+shape = SubResource("RectangleShape2D_2q423")
