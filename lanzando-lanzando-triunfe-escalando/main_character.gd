@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
-const SPEED = 220
+@export var SPEED = 220
 
-var gravity = 980
+@export var gravity = 980
 
 @onready var animar = $Animacion
 
