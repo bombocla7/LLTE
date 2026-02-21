@@ -1,7 +1,7 @@
 extends Control
 
-@onready var jugar = $CanvasLayer/TextureButton
-@onready var salir = $CanvasLayer/TextureButton2
+@onready var jugar = $Start/CanvasLayer/CenterContainer/TextureButton
+@onready var salir = $Start/CanvasLayer/CenterContainer2/TextureButton2
 
 @export var ruta =  "res://nivel.tscn"
 
