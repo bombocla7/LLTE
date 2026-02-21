@@ -32,7 +32,7 @@ func is_climbing() -> bool:
 func velocidades():
 	var dir = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 	velocity.x = dir * SPEED
-	if Input.is_action_just_pressed("Saltar") && is_on_floor():
+	if Input.is_action_just_pressed("ui_salto") && is_on_floor():
 		velocity.y = JUMP_FORCE
 		
 
