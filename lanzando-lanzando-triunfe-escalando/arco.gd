@@ -30,6 +30,10 @@ func arco_carga():
 
 func arco_disparo(carga_disparo):
 	#Dispara la flecha con velocidad proporcional a la carga y en la dirección del ratón
+	
+	if flecha != null:
+		flecha.queue_free()
+	
 	flecha = arrow_scene.instantiate()
 	get_tree().current_scene.add_child(flecha)
 	if get_parent().has_method("conectar_extremo"):
