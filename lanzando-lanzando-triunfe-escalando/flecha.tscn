@@ -4,14 +4,13 @@
 [ext_resource type="Script" uid="uid://c8sdxlq3t4i6o" path="res://flecha.gd" id="1_kyqwc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3nlhn"]
-size = Vector2(20, 8)
+size = Vector2(9, 8)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kyqwc"]
 size = Vector2(12, 4)
 
 [node name="RigidBody2D" type="RigidBody2D"]
-collision_layer = 2
-collision_mask = 3
+collision_layer = 0
 freeze_mode = 1
 script = ExtResource("1_kyqwc")
 
@@ -20,7 +19,7 @@ position = Vector2(-13, 0)
 texture = ExtResource("1_d6mvn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-13, 0)
+position = Vector2(-7.5, 0)
 shape = SubResource("RectangleShape2D_3nlhn")
 
 [node name="Area2D" type="Area2D" parent="."]
