@@ -1,9 +1,11 @@
-[gd_scene load_steps=9 format=4 uid="uid://bi16ehllhhapd"]
+[gd_scene load_steps=11 format=4 uid="uid://bi16ehllhhapd"]
 
 [ext_resource type="PackedScene" uid="uid://cbeeammrc8nj5" path="res://main_character.tscn" id="1_h06de"]
 [ext_resource type="Texture2D" uid="uid://bddk72jnw7dku" path="res://Assets/Terrain (16x16).png" id="1_wrbek"]
 [ext_resource type="Texture2D" uid="uid://7fbewit46go4" path="res://Assets/End (Idle).png" id="3_7gdj4"]
 [ext_resource type="Script" uid="uid://dpuojpg5rp1ns" path="res://arco.gd" id="3_j87l1"]
+[ext_resource type="FontFile" uid="uid://xapx6rr7jmfr" path="res://Assets/Fonts/enchanted_land/Enchanted Land.otf" id="3_vttml"]
+[ext_resource type="Script" uid="uid://c0ye1n5pt7il" path="res://hudmanager.gd" id="5_ymy7k"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h06de"]
 texture = ExtResource("1_wrbek")
@@ -314,6 +316,26 @@ tile_map_data = PackedByteArray("AAAAAAAAAAAGAAAAAAABAAAAAAAHAAAAAAACAAAAAAAHAAA
 tile_set = SubResource("TileSet_7gdj4")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="HUD" type="CanvasLayer" parent="Camera2D"]
+script = ExtResource("5_ymy7k")
+
+[node name="time_label" type="Label" parent="Camera2D/HUD"]
+anchors_preset = -1
+offset_left = 1013.0
+offset_top = 10.0
+offset_right = 1077.0
+offset_bottom = 33.0
+grow_horizontal = 0
+scale = Vector2(2, 2)
+size_flags_horizontal = 10
+size_flags_vertical = 0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vttml")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
 
 [node name="Main_character" parent="." instance=ExtResource("1_h06de")]
 position = Vector2(26, -40)
