@@ -9,7 +9,7 @@ var wasclicked = false
 var flecha
 var carga = 0
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	look_at_mouse()
 	
 	
