@@ -7,8 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://dgwayj5wvn8gw" path="res://flecha.tscn" id="4_ymy7k"]
 [ext_resource type="Script" uid="uid://c0ye1n5pt7il" path="res://hudmanager.gd" id="5_ymy7k"]
 [ext_resource type="Texture2D" uid="uid://db1mubmm0c054" path="res://Assets/arco.png" id="7_6apml"]
-[ext_resource type="Script" uid="uid://0wdjm7dv6vs3" path="res://area_cámara.gd" id="8_d04yg"]
-[ext_resource type="Script" uid="uid://bsh2mfangg3pp" path="res://game_manager.gd" id="8_u1w1e"]
+[ext_resource type="Script" path="res://area_cámara.gd" id="8_d04yg"]
+[ext_resource type="Script" path="res://game_manager.gd" id="8_u1w1e"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h06de"]
 texture = ExtResource("1_wrbek")

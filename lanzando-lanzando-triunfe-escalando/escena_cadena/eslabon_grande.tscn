@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bfhp7tkq0i5br"]
+
+[ext_resource type="Texture2D" uid="uid://boehh0vsqsw23" path="res://Assets/cadenas/cadena1.png" id="1_pclfm"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3egcf"]
+
+[node name="EG" type="RigidBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_pclfm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_3egcf")

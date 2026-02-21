@@ -1,71 +1,196 @@
-[gd_scene load_steps=4 format=3 uid="uid://c4mjf44v8sees"]
+[gd_scene load_steps=4 format=3 uid="uid://dhux28ygxywhc"]
 
-[ext_resource type="Texture2D" uid="uid://c28y5fq2cctbc" path="res://Assets/button_3.png" id="1_rt28r"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_teteo"]
-size = Vector2(123, 43)
+[ext_resource type="PackedScene" uid="uid://bfhp7tkq0i5br" path="res://escena_cadena/eslabon_grande.tscn" id="1_teteo"]
+[ext_resource type="PackedScene" uid="uid://cc5rvtf7h137b" path="res://escena_cadena/eslabon_pequeño.tscn" id="2_15lki"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rt28r"]
 
 [node name="Node2D" type="Node2D"]
-position = Vector2(85, 190)
+position = Vector2(73, 54)
+scale = Vector2(0.417584, 0.427029)
 
-[node name="RigidBody2D" type="RigidBody2D" parent="."]
-position = Vector2(212, -44)
+[node name="Enganche" type="StaticBody2D" parent="."]
+scale = Vector2(1.11148, 0.841045)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
-position = Vector2(-3.5, 0.5)
-shape = SubResource("RectangleShape2D_teteo")
-
-[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
-position = Vector2(7, 0)
-scale = Vector2(0.548, 0.539326)
-texture = ExtResource("1_rt28r")
-offset = Vector2(-7, 0)
-
-[node name="RigidBody2D2" type="RigidBody2D" parent="."]
-position = Vector2(346, -44)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D2"]
-position = Vector2(-3.5, 0.5)
-shape = SubResource("RectangleShape2D_teteo")
-
-[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D2"]
-position = Vector2(7, 0)
-scale = Vector2(0.548, 0.539326)
-texture = ExtResource("1_rt28r")
-offset = Vector2(-7, 0)
-
-[node name="RigidBody2D3" type="RigidBody2D" parent="."]
-position = Vector2(78, -44)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D3"]
-position = Vector2(-3.5, 0.5)
-shape = SubResource("RectangleShape2D_teteo")
-
-[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D3"]
-position = Vector2(7, 0)
-scale = Vector2(0.548, 0.539326)
-texture = ExtResource("1_rt28r")
-offset = Vector2(-7, 0)
-
-[node name="PinJoint2D" type="PinJoint2D" parent="."]
-position = Vector2(142, -44)
-node_a = NodePath("../RigidBody2D3")
-node_b = NodePath("../RigidBody2D")
-
-[node name="PinJoint2D3" type="PinJoint2D" parent="."]
-position = Vector2(11, -44)
-node_a = NodePath("../StaticBody2D")
-node_b = NodePath("../RigidBody2D3")
-
-[node name="PinJoint2D2" type="PinJoint2D" parent="."]
-position = Vector2(275, -44)
-node_a = NodePath("../RigidBody2D")
-node_b = NodePath("../RigidBody2D2")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(0, -46)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enganche"]
 shape = SubResource("CircleShape2D_rt28r")
+
+[node name="Pin1" type="PinJoint2D" parent="."]
+position = Vector2(10, 0)
+scale = Vector2(1.11148, 0.841045)
+node_a = NodePath("../Enganche")
+node_b = NodePath("../EG1")
+
+[node name="Pin2" type="PinJoint2D" parent="."]
+position = Vector2(41.3947, 0)
+scale = Vector2(1.11148, 0.841045)
+node_a = NodePath("../EG1")
+node_b = NodePath("../EP1")
+
+[node name="Pin3" type="PinJoint2D" parent="."]
+position = Vector2(71.9736, 0)
+scale = Vector2(1.11148, 0.841045)
+node_a = NodePath("../EP1")
+node_b = NodePath("../EG2")
+
+[node name="Pin4" type="PinJoint2D" parent="."]
+position = Vector2(101.158, 0)
+scale = Vector2(1.11148, 0.841045)
+node_a = NodePath("../EG2")
+node_b = NodePath("../EP2")
+
+[node name="Pin5" type="PinJoint2D" parent="."]
+position = Vector2(131.737, 0)
+scale = Vector2(1.11148, 0.841045)
+node_a = NodePath("../EP2")
+node_b = NodePath("../EG3")
+
+[node name="Pin6" type="PinJoint2D" parent="."]
+position = Vector2(158.526, 0)
+scale = Vector2(1.11148, 0.841045)
+node_a = NodePath("../EG3")
+node_b = NodePath("../EP3")
+
+[node name="Pin7" type="PinJoint2D" parent="."]
+position = Vector2(184.71, 0)
+scale = Vector2(1.11148, 0.841045)
+node_a = NodePath("../EP3")
+node_b = NodePath("../EG4")
+
+[node name="Pin8" type="PinJoint2D" parent="."]
+position = Vector2(239.473, 0)
+scale = Vector2(1.11148, 0.841045)
+node_a = NodePath("../EP7")
+node_b = NodePath("../EG5")
+
+[node name="Pin9" type="PinJoint2D" parent="."]
+position = Vector2(268.473, 0)
+scale = Vector2(1.11148, 0.841045)
+node_a = NodePath("../EG5")
+node_b = NodePath("../EP4")
+
+[node name="Pin15" type="PinJoint2D" parent="."]
+position = Vector2(212.5, 0)
+scale = Vector2(1.11148, 0.841045)
+node_a = NodePath("../EG4")
+node_b = NodePath("../EP7")
+
+[node name="Pin10" type="PinJoint2D" parent="."]
+position = Vector2(291.868, 0)
+scale = Vector2(1.11148, 0.841045)
+node_a = NodePath("../EP4")
+node_b = NodePath("../EG6")
+
+[node name="Pin11" type="PinJoint2D" parent="."]
+position = Vector2(318.658, 0)
+scale = Vector2(1.11148, 0.841045)
+node_a = NodePath("../EG6")
+node_b = NodePath("../EP5")
+
+[node name="Pin12" type="PinJoint2D" parent="."]
+position = Vector2(346.842, 0)
+scale = Vector2(1.11148, 0.841045)
+node_a = NodePath("../EP5")
+node_b = NodePath("../EG7")
+
+[node name="Pin13" type="PinJoint2D" parent="."]
+position = Vector2(373.631, 0)
+scale = Vector2(1.11148, 0.841045)
+node_a = NodePath("../EG7")
+node_b = NodePath("../EP6")
+
+[node name="Pin14" type="PinJoint2D" parent="."]
+position = Vector2(399.816, 0)
+scale = Vector2(1.11148, 0.841045)
+node_a = NodePath("../EG8")
+node_b = NodePath("../EP6")
+
+[node name="EG1" parent="." instance=ExtResource("1_teteo")]
+position = Vector2(27, 0)
+scale = Vector2(1.11148, 0.841045)
+collision_layer = 0
+collision_mask = 0
+
+[node name="EP1" parent="." instance=ExtResource("2_15lki")]
+position = Vector2(57.5789, 0)
+scale = Vector2(1.11148, 0.841045)
+collision_layer = 0
+collision_mask = 0
+
+[node name="EG2" parent="." instance=ExtResource("1_teteo")]
+position = Vector2(86.7631, 0)
+scale = Vector2(1.11148, 0.841045)
+collision_layer = 0
+collision_mask = 0
+
+[node name="EP2" parent="." instance=ExtResource("2_15lki")]
+position = Vector2(116.342, 0)
+scale = Vector2(1.11148, 0.841045)
+collision_layer = 0
+collision_mask = 0
+
+[node name="EG3" parent="." instance=ExtResource("1_teteo")]
+position = Vector2(143.131, 0)
+scale = Vector2(1.11148, 0.841045)
+collision_layer = 0
+collision_mask = 0
+
+[node name="EP3" parent="." instance=ExtResource("2_15lki")]
+position = Vector2(170.315, 0)
+scale = Vector2(1.11148, 0.841045)
+collision_layer = 0
+collision_mask = 0
+
+[node name="EG4" parent="." instance=ExtResource("1_teteo")]
+position = Vector2(198.5, 0)
+scale = Vector2(1.11148, 0.841045)
+collision_layer = 0
+collision_mask = 0
+
+[node name="EG5" parent="." instance=ExtResource("1_teteo")]
+position = Vector2(254.079, 0)
+scale = Vector2(1.11148, 0.841045)
+collision_layer = 0
+collision_mask = 0
+
+[node name="EP4" parent="." instance=ExtResource("2_15lki")]
+position = Vector2(279.868, 0)
+scale = Vector2(1.11148, 0.841045)
+collision_layer = 0
+collision_mask = 0
+
+[node name="EP7" parent="." instance=ExtResource("2_15lki")]
+position = Vector2(226.289, 0)
+scale = Vector2(1.11148, 0.841045)
+collision_layer = 0
+collision_mask = 0
+
+[node name="EG6" parent="." instance=ExtResource("1_teteo")]
+position = Vector2(306.658, 0)
+scale = Vector2(1.11148, 0.841045)
+collision_layer = 0
+collision_mask = 0
+
+[node name="EP5" parent="." instance=ExtResource("2_15lki")]
+position = Vector2(333.842, 0)
+scale = Vector2(1.11148, 0.841045)
+collision_layer = 0
+collision_mask = 0
+
+[node name="EG7" parent="." instance=ExtResource("1_teteo")]
+position = Vector2(360.631, 0)
+scale = Vector2(1.11148, 0.841045)
+collision_layer = 0
+collision_mask = 0
+
+[node name="EP6" parent="." instance=ExtResource("2_15lki")]
+position = Vector2(387.815, 0)
+scale = Vector2(1.11148, 0.841045)
+collision_layer = 0
+collision_mask = 0
+
+[node name="EG8" parent="." instance=ExtResource("1_teteo")]
+position = Vector2(413.605, 0)
+scale = Vector2(1.11148, 0.841045)
+collision_layer = 0
+collision_mask = 0
