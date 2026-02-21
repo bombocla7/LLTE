@@ -1,11 +1,12 @@
-[gd_scene load_steps=11 format=4 uid="uid://bi16ehllhhapd"]
+[gd_scene load_steps=12 format=4 uid="uid://bi16ehllhhapd"]
 
 [ext_resource type="PackedScene" uid="uid://cbeeammrc8nj5" path="res://main_character.tscn" id="1_h06de"]
 [ext_resource type="Texture2D" uid="uid://bddk72jnw7dku" path="res://Assets/Terrain (16x16).png" id="1_wrbek"]
 [ext_resource type="Texture2D" uid="uid://7fbewit46go4" path="res://Assets/End (Idle).png" id="3_7gdj4"]
 [ext_resource type="Script" uid="uid://dpuojpg5rp1ns" path="res://arco.gd" id="3_j87l1"]
 [ext_resource type="FontFile" uid="uid://xapx6rr7jmfr" path="res://Assets/Fonts/enchanted_land/Enchanted Land.otf" id="3_vttml"]
-[ext_resource type="Script" uid="uid://c0ye1n5pt7il" path="res://hudmanager.gd" id="5_ymy7k"]
+[ext_resource type="PackedScene" uid="uid://dgwayj5wvn8gw" path="res://flecha.tscn" id="4_ymy7k"]
+[ext_resource type="Script" path="res://hudmanager.gd" id="5_ymy7k"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h06de"]
 texture = ExtResource("1_wrbek")
@@ -312,7 +313,7 @@ animations = [{
 
 [node name="Plataformas" type="TileMapLayer" parent="."]
 position = Vector2(-104, 0)
-tile_map_data = PackedByteArray("AAAAAAAAAAAGAAAAAAABAAAAAAAHAAAAAAACAAAAAAAHAAAAAAADAAAAAAAHAAAAAAAEAAAAAAAHAAAAAAAFAAAAAAAHAAAAAAAGAAAAAAAHAAAAAAAIAAAAAAAHAAAAAAAJAAAAAAAHAAAAAAAKAAAAAAAHAAAAAAALAAAAAAAHAAAAAAAMAAAAAAAHAAAAAAANAAAAAAAHAAAAAAAOAAAAAAAHAAAAAAAPAAAAAAAHAAAAAAAQAAAAAAAHAAAAAAARAAAAAAAHAAAAAAASAAAAAAAHAAAAAAATAAAAAAAHAAAAAAAHAAAAAAAHAAAAAAA=")
+tile_map_data = PackedByteArray("AAACAAAAAAAHAAAAAAADAAAAAAAHAAAAAAAEAAAAAAAHAAAAAAAFAAAAAAAHAAAAAAAGAAAAAAAHAAAAAAAIAAAAAAAHAAAAAAAJAAAAAAAHAAAAAAAKAAAAAAAHAAAAAAALAAAAAAAHAAAAAAAMAAAAAAAHAAAAAAANAAAAAAAHAAAAAAAOAAAAAAAHAAAAAAAPAAAAAAAHAAAAAAAQAAAAAAAHAAAAAAARAAAAAAAHAAAAAAASAAAAAAAHAAAAAAATAAAAAAAHAAAAAAAHAAAAAAAHAAAAAAABAAAAAAAHAAAAAAAAAAAAAAAGAAAAAAA=")
 tile_set = SubResource("TileSet_7gdj4")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -321,12 +322,10 @@ tile_set = SubResource("TileSet_7gdj4")
 script = ExtResource("5_ymy7k")
 
 [node name="time_label" type="Label" parent="Camera2D/HUD"]
-anchors_preset = -1
 offset_left = 1013.0
 offset_top = 10.0
 offset_right = 1077.0
 offset_bottom = 33.0
-grow_horizontal = 0
 scale = Vector2(2, 2)
 size_flags_horizontal = 10
 size_flags_vertical = 0
@@ -340,15 +339,12 @@ uppercase = true
 [node name="Main_character" parent="." instance=ExtResource("1_h06de")]
 position = Vector2(26, -40)
 
-[node name="Animacion" parent="Main_character" index="0"]
-animation = &"idle"
-
 [node name="CollisionShape2D" parent="Main_character" index="1"]
-position = Vector2(0, 23)
+position = Vector2(-2, 7)
 
 [node name="Arco" type="Node2D" parent="Main_character"]
 script = ExtResource("3_j87l1")
-arrow_scene = ExtResource("1_h06de")
+arrow_scene = ExtResource("4_ymy7k")
 
 [node name="Arco (sprite)" type="AnimatedSprite2D" parent="Main_character/Arco"]
 position = Vector2(12, 0)
