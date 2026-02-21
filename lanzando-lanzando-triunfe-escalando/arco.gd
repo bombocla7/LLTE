@@ -46,9 +46,8 @@ func arco_disparo(carga_disparo):
 			
 		flecha = arrow_scene.instantiate()
 		get_tree().current_scene.add_child(flecha)
+		
 		flecha.global_position = global_position
-		if get_parent().has_method("conectar_extremo"):
-			get_parent().conectar_extremo(flecha)
 		var direccion_x = (get_global_mouse_position() - global_position).normalized()
 		print(str(direccion_x))
 		var fuerza_base = 6

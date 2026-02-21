@@ -5,7 +5,6 @@ extends CharacterBody2D
 @export var gravity = 980
 
 @onready var animar = $Animacion
-@onready var spring = $DampedSpringJoint2D
 
 func _physics_process(delta):
 	#GRAVEDAD#
@@ -35,12 +34,6 @@ func velocidades():
 	if Input.is_action_just_pressed("ui_salto") && is_on_floor():
 		velocity.y = JUMP_FORCE
 		
-
-func conectar_extremo(body:RigidBody2D):
-	spring.node_b = body.get_path()
-	
-	
-
 func animaciones():
 	if velocity.x > 0:
 		animar.flip_h = false
