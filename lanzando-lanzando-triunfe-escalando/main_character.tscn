@@ -77,3 +77,5 @@ shape = SubResource("RectangleShape2D_2q423")
 [node name="DampedSpringJoint2D" type="DampedSpringJoint2D" parent="."]
 node_a = NodePath("..")
 length = 100.0
+rest_length = 30.0
+stiffness = 0.1
