@@ -318,9 +318,15 @@ tile_set = SubResource("TileSet_7gdj4")
 [node name="Main_character" parent="." instance=ExtResource("1_h06de")]
 position = Vector2(26, -40)
 
+[node name="Animacion" parent="Main_character" index="0"]
+animation = &"idle"
+
+[node name="CollisionShape2D" parent="Main_character" index="1"]
+position = Vector2(0, 23)
+
 [node name="Arco" type="Node2D" parent="Main_character"]
 script = ExtResource("3_j87l1")
-max_carga = 100
+arrow_scene = ExtResource("1_h06de")
 
 [node name="Arco (sprite)" type="AnimatedSprite2D" parent="Main_character/Arco"]
 position = Vector2(12, 0)
