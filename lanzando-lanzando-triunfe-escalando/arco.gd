@@ -38,10 +38,9 @@ func arco_disparo(carga_disparo):
 	flecha.global_position = global_position
 	if get_parent().has_method("conectar_extremo"):
 		get_parent().conectar_extremo(flecha)
-	
 	var direccion_x = (get_global_mouse_position() - global_position).normalized()
 	print(str(direccion_x))
-	var fuerza_base = 30
+	var fuerza_base = 5
 	flecha.rotation = direccion_x.angle()
 	#EL OBJETO A CREAR NO DEBE TENER LA VELOCIDAD EN X DEFINIDA EN 0 O EN OTRO VALOR ESTRICTO, LA VELOCIDAD DE LA FLECHA SE DA AQUI
 	flecha.linear_velocity = direccion_x * fuerza_base * carga_disparo

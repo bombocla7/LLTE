@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="lanzando-lanzando-triunfe-escalando"
-run/main_scene="uid://bi16ehllhhapd"
+run/main_scene="uid://dy6mjcuompxyv"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
