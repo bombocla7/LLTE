@@ -31,10 +31,10 @@ func arco_carga():
 func arco_disparo(carga_disparo):
 	#Dispara la flecha con velocidad proporcional a la carga y en la dirección del ratón
 	flecha = arrow_scene.instantiate()
-	get_tree().current_scene.add_child(flecha)
+	get_parent().add_child(flecha)
 	if get_parent().has_method("conectar_extremo"):
 		get_parent().conectar_extremo(flecha)
-	flecha.position = global_position
+	flecha.global_position = global_position
 	var direccion_x = (get_global_mouse_position() - global_position).normalized()
 	print(str(direccion_x))
 	var fuerza_base = 5

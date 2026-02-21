@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://dpuojpg5rp1ns" path="res://arco.gd" id="3_j87l1"]
 [ext_resource type="FontFile" uid="uid://xapx6rr7jmfr" path="res://Assets/Fonts/enchanted_land/Enchanted Land.otf" id="3_vttml"]
 [ext_resource type="PackedScene" uid="uid://dgwayj5wvn8gw" path="res://flecha.tscn" id="4_ymy7k"]
-[ext_resource type="Script" uid="uid://c0ye1n5pt7il" path="res://hudmanager.gd" id="5_ymy7k"]
+[ext_resource type="Script" path="res://hudmanager.gd" id="5_ymy7k"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h06de"]
 texture = ExtResource("1_wrbek")

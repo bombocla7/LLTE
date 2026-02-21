@@ -68,11 +68,11 @@ gravity = 500
 [node name="Animacion" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_wcpx6")
 animation = &"idle"
-frame_progress = 0.0229644
+frame_progress = 0.307487
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_2q423")
 
 [node name="DampedSpringJoint2D" type="DampedSpringJoint2D" parent="."]
 node_a = NodePath("..")
-length = 167.0
+length = 100.0
