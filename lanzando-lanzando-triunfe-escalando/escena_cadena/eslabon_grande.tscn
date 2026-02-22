@@ -14,3 +14,7 @@ texture = ExtResource("1_pclfm")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_3egcf")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="."]
+position = Vector2(16, 0)
+node_b = NodePath("..")

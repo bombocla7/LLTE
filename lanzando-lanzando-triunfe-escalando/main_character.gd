@@ -31,15 +31,13 @@ func _process(delta: float) -> void:
 			eslabonL = eslabonL_scene.instantiate()
 			get_tree().current_scene.add_child(eslabonL)
 			eslabonL.set_mass(0.001)
-			var joint = joint_scene.instantiate()
-			ult_eslabon.get_node().add_child(joint)
-			eslabonL.global_position = joint.global_position
-			joint.set_node_a(flechaP.get_path())
-			joint.set_node_b(eslabonL.get_path())
+			var joint = eslabonL.get_node("PinJoint2D")
+			eslabonL.global_position = ult_eslabon.global_position - ((ult_eslabon.global_position - global_position).normalized() * 10)
+			joint.set_node_a(ult_eslabon.get_path())
 			joint.set_exclude_nodes_from_collision(true)
+			#eslabonL.set_freeze_enabled(true)
 			ult_eslabon = eslabonL
 			aux = aux + 1
-			
 			
 
 func _physics_process(delta):
@@ -97,3 +95,8 @@ func on_arco_disparado(flecha):
 
 func on_flecha_choca():
 	flecha_disparada = false
+	ult_eslabon.global_position = global_position
+	ult_eslabon.set_freeze_enabled(true)
+	var joint = ult_eslabon.get_node("PinJoint2D")
+	joint.set_node_a(self.get_path())
+	joint.set_exclude_nodes_from_collision(true)
