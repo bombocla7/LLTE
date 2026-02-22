@@ -3,22 +3,21 @@
 [ext_resource type="PackedScene" uid="uid://bfhp7tkq0i5br" path="res://escena_cadena/eslabon_grande.tscn" id="1_teteo"]
 [ext_resource type="PackedScene" uid="uid://cc5rvtf7h137b" path="res://escena_cadena/eslabon_pequeño.tscn" id="2_15lki"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_rt28r"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_teteo"]
 
-[node name="Node2D" type="Node2D"]
-position = Vector2(73, 54)
-scale = Vector2(0.417584, 0.427029)
+[node name="Node2D" type="RigidBody2D"]
+collision_layer = 32
+collision_mask = 32
+mass = 0.5
 
-[node name="Enganche" type="StaticBody2D" parent="."]
-scale = Vector2(1.11148, 0.841045)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enganche"]
-shape = SubResource("CircleShape2D_rt28r")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1, 1)
+shape = SubResource("CircleShape2D_teteo")
 
 [node name="Pin1" type="PinJoint2D" parent="."]
 position = Vector2(10, 0)
 scale = Vector2(1.11148, 0.841045)
-node_a = NodePath("../Enganche")
+node_a = NodePath("..")
 node_b = NodePath("../EG1")
 
 [node name="Pin2" type="PinJoint2D" parent="."]
@@ -107,90 +106,75 @@ node_b = NodePath("../EP6")
 
 [node name="EG1" parent="." instance=ExtResource("1_teteo")]
 position = Vector2(27, 0)
-scale = Vector2(1.11148, 0.841045)
 collision_layer = 0
 collision_mask = 0
 
 [node name="EP1" parent="." instance=ExtResource("2_15lki")]
 position = Vector2(57.5789, 0)
-scale = Vector2(1.11148, 0.841045)
 collision_layer = 0
 collision_mask = 0
 
 [node name="EG2" parent="." instance=ExtResource("1_teteo")]
 position = Vector2(86.7631, 0)
-scale = Vector2(1.11148, 0.841045)
 collision_layer = 0
 collision_mask = 0
 
 [node name="EP2" parent="." instance=ExtResource("2_15lki")]
 position = Vector2(116.342, 0)
-scale = Vector2(1.11148, 0.841045)
 collision_layer = 0
 collision_mask = 0
 
 [node name="EG3" parent="." instance=ExtResource("1_teteo")]
 position = Vector2(143.131, 0)
-scale = Vector2(1.11148, 0.841045)
 collision_layer = 0
 collision_mask = 0
 
 [node name="EP3" parent="." instance=ExtResource("2_15lki")]
 position = Vector2(170.315, 0)
-scale = Vector2(1.11148, 0.841045)
 collision_layer = 0
 collision_mask = 0
 
 [node name="EG4" parent="." instance=ExtResource("1_teteo")]
 position = Vector2(198.5, 0)
-scale = Vector2(1.11148, 0.841045)
 collision_layer = 0
 collision_mask = 0
 
 [node name="EG5" parent="." instance=ExtResource("1_teteo")]
 position = Vector2(254.079, 0)
-scale = Vector2(1.11148, 0.841045)
 collision_layer = 0
 collision_mask = 0
 
 [node name="EP4" parent="." instance=ExtResource("2_15lki")]
 position = Vector2(279.868, 0)
-scale = Vector2(1.11148, 0.841045)
 collision_layer = 0
 collision_mask = 0
 
 [node name="EP7" parent="." instance=ExtResource("2_15lki")]
 position = Vector2(226.289, 0)
-scale = Vector2(1.11148, 0.841045)
 collision_layer = 0
 collision_mask = 0
 
 [node name="EG6" parent="." instance=ExtResource("1_teteo")]
 position = Vector2(306.658, 0)
-scale = Vector2(1.11148, 0.841045)
 collision_layer = 0
 collision_mask = 0
 
 [node name="EP5" parent="." instance=ExtResource("2_15lki")]
 position = Vector2(333.842, 0)
-scale = Vector2(1.11148, 0.841045)
 collision_layer = 0
 collision_mask = 0
 
 [node name="EG7" parent="." instance=ExtResource("1_teteo")]
 position = Vector2(360.631, 0)
-scale = Vector2(1.11148, 0.841045)
 collision_layer = 0
 collision_mask = 0
 
 [node name="EP6" parent="." instance=ExtResource("2_15lki")]
 position = Vector2(387.815, 0)
-scale = Vector2(1.11148, 0.841045)
 collision_layer = 0
 collision_mask = 0
 
 [node name="EG8" parent="." instance=ExtResource("1_teteo")]
 position = Vector2(413.605, 0)
-scale = Vector2(1.11148, 0.841045)
 collision_layer = 0
 collision_mask = 0

@@ -2,11 +2,15 @@ extends Node2D
 
 @export var max_carga = 150 # 150 = 3 segundos
 @export var arrow_scene: PackedScene
+@export var chain_scene: PackedScene
+@export var pin_scene: PackedScene
 
 @onready var animacion = $"Arco (sprite)"
 
 var wasclicked = false
 var flecha
+var cadena 
+var pin
 var carga = 0
 
 func _physics_process(_delta):
@@ -36,24 +40,32 @@ func arco_carga():
 	print(carga)
 
 func arco_disparo(carga_disparo):
+	
 	#Dispara la flecha con velocidad proporcional a la carga y en la dirección del ratón
 	if flecha == null:
 		flecha = arrow_scene.instantiate()
-		
+		cadena = chain_scene.instantiate()
+		pin = pin_scene.instantiate()
 	if !flecha.aire:
 		if flecha.choca:
 			flecha.queue_free()
-			
 		flecha = arrow_scene.instantiate()
 		get_tree().current_scene.add_child(flecha)
+		get_tree().current_scene.add_child(cadena)
+		get_tree().current_scene.add_child(pin)
 		
 		flecha.global_position = global_position
+		#cadena.global_position = global_position
+		
 		var direccion_x = (get_global_mouse_position() - global_position).normalized()
 		print(str(direccion_x))
 		var fuerza_base = 6
 		flecha.rotation = direccion_x.angle()
+		cadena.rotation = direccion_x.angle()
+		
 		#EL OBJETO A CREAR NO DEBE TENER LA VELOCIDAD EN X DEFINIDA EN 0 O EN OTRO VALOR ESTRICTO, LA VELOCIDAD DE LA FLECHA SE DA AQUI
 		flecha.linear_velocity = direccion_x * fuerza_base * carga_disparo
+		cadena.linear_velocity = flecha.linear_velocity
 		carga = 0
 		
 		flecha.aire = true
