@@ -117,7 +117,7 @@ position = Vector2(-1, 19)
 shape = SubResource("WorldBoundaryShape2D_sdrig")
 
 [node name="Main_character" parent="." instance=ExtResource("1_h06de")]
-position = Vector2(-62, -963)
+position = Vector2(-6, 251)
 eslabonL_scene = ExtResource("5_l1yqx")
 eslabonS_scene = ExtResource("6_1il4o")
 joint_scene = ExtResource("8_l1yqx")
