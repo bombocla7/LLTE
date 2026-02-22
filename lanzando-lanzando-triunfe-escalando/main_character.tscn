@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://bp42h3a4bqq01" path="res://main_character.gd" id="1_2q423"]
 [ext_resource type="Texture2D" uid="uid://puurdksdk5yb" path="res://Assets/player_frames/frame_00002.png" id="2_k7f46"]
-[ext_resource type="Texture2D" uid="uid://dsqxborcq2hd2" path="res://Assets/Idle.png" id="3_jw0ju"]
 [ext_resource type="Texture2D" uid="uid://b5ssnpwm26c7d" path="res://Assets/player_frames/frame_00006.png" id="4_47qjj"]
 [ext_resource type="Texture2D" uid="uid://raqxsma7u4y5" path="res://Assets/player_frames/frame_00007.png" id="5_dypn8"]
 [ext_resource type="Texture2D" uid="uid://75vdoj411ucd" path="res://Assets/player_frames/frame_00008.png" id="6_07ek2"]
@@ -26,7 +25,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_jw0ju")
+"texture": ExtResource("9_wtyc1")
 }],
 "loop": true,
 "name": &"jump",
@@ -68,8 +67,10 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2q423"]
-size = Vector2(19, 18)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1vudk"]
+height = 58.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1vudk"]
 
 [node name="main_character" type="CharacterBody2D"]
 collision_layer = 128
@@ -80,7 +81,18 @@ gravity = 500
 
 [node name="Animacion" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_wcpx6")
-animation = &"walk"
+animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_2q423")
+position = Vector2(-1, 2)
+shape = SubResource("CapsuleShape2D_1vudk")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 32)
+shape = SubResource("WorldBoundaryShape2D_1vudk")
+
+[connection signal="body_entered" from="Area2D" to="." method="flecha_caida"]

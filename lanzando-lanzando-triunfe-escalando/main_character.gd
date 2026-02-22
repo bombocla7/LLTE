@@ -100,3 +100,14 @@ func on_flecha_choca():
 	var joint = ult_eslabon.get_node("PinJoint2D")
 	joint.set_node_a(self.get_path())
 	joint.set_exclude_nodes_from_collision(true)
+
+
+
+func flecha_caida(body: RigidBody2D) -> void:
+	if body.linear_velocity.x < 0:
+		while is_on_floor():
+			velocity.x = -SPEED
+	else:
+		while is_on_floor():
+			velocity.x = SPEED
+	pass
