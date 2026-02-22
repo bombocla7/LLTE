@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://bi16ehllhhapd"]
+[gd_scene load_steps=27 format=3 uid="uid://bi16ehllhhapd"]
 
 [ext_resource type="Texture2D" uid="uid://c5jiwejblv884" path="res://Assets/fondos_assets_png/ad4f0766-1.png" id="1_e70fy"]
 [ext_resource type="PackedScene" uid="uid://cbeeammrc8nj5" path="res://main_character.tscn" id="1_h06de"]
@@ -15,7 +15,10 @@
 [ext_resource type="Texture2D" uid="uid://db1mubmm0c054" path="res://Assets/arco.png" id="7_6apml"]
 [ext_resource type="Script" uid="uid://0wdjm7dv6vs3" path="res://area_cámara.gd" id="8_d04yg"]
 [ext_resource type="PackedScene" uid="uid://klisu4gm2a4u" path="res://pin.tscn" id="8_l1yqx"]
+[ext_resource type="PackedScene" uid="uid://pvihsw664uru" path="res://escenas plataformas/plataforma mina.tscn" id="17_bcau2"]
 [ext_resource type="Script" path="res://area_final.gd" id="17_e7jer"]
+[ext_resource type="PackedScene" uid="uid://dnbi1kvr5fvlm" path="res://escenas plataformas/plataforma_cueva.tscn" id="18_sye3q"]
+[ext_resource type="PackedScene" uid="uid://dcwiyvqavggma" path="res://escenas plataformas/plataforma salida.tscn" id="19_8a6d0"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_sdrig"]
 
@@ -199,6 +202,94 @@ scale = Vector2(50, 37.5)
 shape = SubResource("RectangleShape2D_u1w1e")
 
 [node name="Plataformas2" type="Node" parent="."]
+
+[node name="Node2D" parent="Plataformas2" instance=ExtResource("17_bcau2")]
+z_index = 4
+position = Vector2(-122, 177)
+
+[node name="Node2D2" parent="Plataformas2" instance=ExtResource("17_bcau2")]
+position = Vector2(97, 107)
+
+[node name="Node2D3" parent="Plataformas2" instance=ExtResource("17_bcau2")]
+position = Vector2(-187, -7)
+
+[node name="Node2D4" parent="Plataformas2" instance=ExtResource("17_bcau2")]
+position = Vector2(52, -91)
+
+[node name="Node2D5" parent="Plataformas2" instance=ExtResource("17_bcau2")]
+position = Vector2(-188, -191)
+
+[node name="Node2D6" parent="Plataformas2" instance=ExtResource("17_bcau2")]
+position = Vector2(126, -257)
+
+[node name="Node2D7" parent="Plataformas2" instance=ExtResource("17_bcau2")]
+position = Vector2(-199, -360)
+
+[node name="Node2D8" parent="Plataformas2" instance=ExtResource("17_bcau2")]
+position = Vector2(138, -410)
+
+[node name="Node2D9" parent="Plataformas2" instance=ExtResource("17_bcau2")]
+position = Vector2(-257, -538)
+
+[node name="Node2D10" parent="Plataformas2" instance=ExtResource("17_bcau2")]
+position = Vector2(114, -634)
+
+[node name="Node2D11" parent="Plataformas2" instance=ExtResource("17_bcau2")]
+position = Vector2(324, -781)
+
+[node name="Node2D12" parent="Plataformas2" instance=ExtResource("17_bcau2")]
+position = Vector2(-149, -854)
+
+[node name="Node2D13" parent="Plataformas2" instance=ExtResource("17_bcau2")]
+position = Vector2(-345, -1008)
+
+[node name="Node2D14" parent="Plataformas2" instance=ExtResource("17_bcau2")]
+position = Vector2(81, -1095)
+
+[node name="Node2D15" parent="Plataformas2" instance=ExtResource("17_bcau2")]
+position = Vector2(-252, -1157)
+
+[node name="Node2D16" parent="Plataformas2" instance=ExtResource("18_sye3q")]
+position = Vector2(147, -1286)
+
+[node name="Node2D17" parent="Plataformas2" instance=ExtResource("18_sye3q")]
+position = Vector2(299, -1407)
+
+[node name="Node2D18" parent="Plataformas2" instance=ExtResource("18_sye3q")]
+position = Vector2(-204, -1418)
+
+[node name="Node2D19" parent="Plataformas2" instance=ExtResource("18_sye3q")]
+position = Vector2(82, -1583)
+
+[node name="Node2D20" parent="Plataformas2" instance=ExtResource("18_sye3q")]
+position = Vector2(-279, -1718)
+
+[node name="Node2D21" parent="Plataformas2" instance=ExtResource("18_sye3q")]
+position = Vector2(140, -1814)
+
+[node name="Node2D22" parent="Plataformas2" instance=ExtResource("18_sye3q")]
+position = Vector2(-192, -1955)
+
+[node name="Node2D23" parent="Plataformas2" instance=ExtResource("19_8a6d0")]
+position = Vector2(267, -2067)
+
+[node name="Node2D24" parent="Plataformas2" instance=ExtResource("19_8a6d0")]
+position = Vector2(121, -2309)
+
+[node name="Node2D25" parent="Plataformas2" instance=ExtResource("19_8a6d0")]
+position = Vector2(-167, -2141)
+
+[node name="Node2D26" parent="Plataformas2" instance=ExtResource("19_8a6d0")]
+position = Vector2(-281, -2414)
+
+[node name="Node2D27" parent="Plataformas2" instance=ExtResource("19_8a6d0")]
+position = Vector2(117, -2456)
+
+[node name="Node2D28" parent="Plataformas2" instance=ExtResource("19_8a6d0")]
+position = Vector2(321, -2560)
+
+[node name="Node2D29" parent="Plataformas2" instance=ExtResource("19_8a6d0")]
+position = Vector2(49, -2722)
 
 [node name="paredes" type="Node" parent="."]
 
