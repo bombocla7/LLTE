@@ -16,7 +16,7 @@
 [ext_resource type="Script" uid="uid://0wdjm7dv6vs3" path="res://area_cámara.gd" id="8_d04yg"]
 [ext_resource type="PackedScene" uid="uid://klisu4gm2a4u" path="res://pin.tscn" id="8_l1yqx"]
 [ext_resource type="PackedScene" uid="uid://pvihsw664uru" path="res://escenas plataformas/plataforma mina.tscn" id="17_bcau2"]
-[ext_resource type="Script" path="res://area_final.gd" id="17_e7jer"]
+[ext_resource type="Script" uid="uid://cfk68jsf6afvn" path="res://area_final.gd" id="17_e7jer"]
 [ext_resource type="PackedScene" uid="uid://dnbi1kvr5fvlm" path="res://escenas plataformas/plataforma_cueva.tscn" id="18_sye3q"]
 [ext_resource type="PackedScene" uid="uid://dcwiyvqavggma" path="res://escenas plataformas/plataforma salida.tscn" id="19_8a6d0"]
 
