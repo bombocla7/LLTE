@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://brmngy8vd7wwt"]
+
+[ext_resource type="AudioStream" path="res://Assets/LLTE_ConJammOn_2026_Cancion_escalada.ogg" id="1_d2dya"]
+[ext_resource type="Script" path="res://audio_stream_player_2d.gd" id="2_e0u7o"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_d2dya")
+volume_db = 9.751
+script = ExtResource("2_e0u7o")
