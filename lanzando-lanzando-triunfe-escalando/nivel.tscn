@@ -1,13 +1,14 @@
-[gd_scene load_steps=19 format=4 uid="uid://bi16ehllhhapd"]
+[gd_scene load_steps=20 format=4 uid="uid://bi16ehllhhapd"]
 
 [ext_resource type="PackedScene" uid="uid://cbeeammrc8nj5" path="res://main_character.tscn" id="1_h06de"]
 [ext_resource type="Texture2D" uid="uid://bddk72jnw7dku" path="res://Assets/Terrain (16x16).png" id="1_wrbek"]
 [ext_resource type="Script" uid="uid://dpuojpg5rp1ns" path="res://arco.gd" id="3_j87l1"]
 [ext_resource type="FontFile" uid="uid://xapx6rr7jmfr" path="res://Assets/Fonts/enchanted_land/Enchanted Land.otf" id="3_vttml"]
 [ext_resource type="PackedScene" uid="uid://dgwayj5wvn8gw" path="res://flecha.tscn" id="4_ymy7k"]
+[ext_resource type="PackedScene" uid="uid://bfhp7tkq0i5br" path="res://escena_cadena/eslabon_grande.tscn" id="5_l1yqx"]
 [ext_resource type="Script" uid="uid://c0ye1n5pt7il" path="res://hudmanager.gd" id="5_ymy7k"]
+[ext_resource type="PackedScene" uid="uid://cc5rvtf7h137b" path="res://escena_cadena/eslabon_pequeño.tscn" id="6_1il4o"]
 [ext_resource type="Texture2D" uid="uid://db1mubmm0c054" path="res://Assets/arco.png" id="7_6apml"]
-[ext_resource type="PackedScene" uid="uid://dhux28ygxywhc" path="res://cadena.tscn" id="7_sdrig"]
 [ext_resource type="Script" uid="uid://0wdjm7dv6vs3" path="res://area_cámara.gd" id="8_d04yg"]
 [ext_resource type="PackedScene" uid="uid://klisu4gm2a4u" path="res://pin.tscn" id="8_l1yqx"]
 [ext_resource type="Script" uid="uid://bsh2mfangg3pp" path="res://game_manager.gd" id="8_u1w1e"]
@@ -367,6 +368,9 @@ shape = SubResource("WorldBoundaryShape2D_sdrig")
 
 [node name="Main_character" parent="." instance=ExtResource("1_h06de")]
 position = Vector2(-171, -1422)
+eslabonL_scene = ExtResource("5_l1yqx")
+eslabonS_scene = ExtResource("6_1il4o")
+joint_scene = ExtResource("8_l1yqx")
 
 [node name="CollisionShape2D" parent="Main_character" index="1"]
 position = Vector2(-2, 7)
@@ -374,8 +378,6 @@ position = Vector2(-2, 7)
 [node name="Arco" type="Node2D" parent="Main_character"]
 script = ExtResource("3_j87l1")
 arrow_scene = ExtResource("4_ymy7k")
-chain_scene = ExtResource("7_sdrig")
-pin_scene = ExtResource("8_l1yqx")
 
 [node name="Arco (sprite)" type="AnimatedSprite2D" parent="Main_character/Arco"]
 position = Vector2(12, 0)
