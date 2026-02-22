@@ -18,3 +18,11 @@ func formatear_tiempo(tiempo:float) -> String:
 	var mins:int = (int(tiempo) % 3600) / 60
 	var horas:int = int(tiempo) / 3600	
 	return "%02d:%02d:%02d" % [horas,mins,secs]
+
+
+func _on_area_cámara_2_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.
+
+
+func _on_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.

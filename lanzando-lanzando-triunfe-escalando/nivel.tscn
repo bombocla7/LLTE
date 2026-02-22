@@ -393,7 +393,7 @@ position = Vector2(-1, 19)
 shape = SubResource("WorldBoundaryShape2D_sdrig")
 
 [node name="AreaCámara2" type="Area2D" parent="."]
-position = Vector2(0, -755)
+position = Vector2(0, -780)
 collision_mask = 128
 script = ExtResource("8_d04yg")
 
@@ -401,8 +401,25 @@ script = ExtResource("8_d04yg")
 scale = Vector2(50, 37.5)
 shape = SubResource("RectangleShape2D_u1w1e")
 
+[node name="AreaCámara3" type="Area2D" parent="."]
+position = Vector2(0, -1560)
+collision_mask = 128
+script = ExtResource("8_d04yg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaCámara3"]
+scale = Vector2(50, 37.5)
+shape = SubResource("RectangleShape2D_u1w1e")
+
+[node name="AreaCámara4" type="Area2D" parent="."]
+position = Vector2(0, -2340)
+collision_mask = 128
+script = ExtResource("8_d04yg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaCámara4"]
+scale = Vector2(50, 37.5)
+shape = SubResource("RectangleShape2D_u1w1e")
+
 [node name="AreaCámara1" type="Area2D" parent="."]
-visible = false
 collision_mask = 128
 script = ExtResource("8_d04yg")
 
@@ -413,6 +430,9 @@ shape = SubResource("RectangleShape2D_u1w1e")
 [node name="GameManager" type="Node" parent="."]
 script = ExtResource("8_u1w1e")
 
+[connection signal="body_entered" from="AreaCámara2" to="AreaCámara2" method="_on_body_entered"]
+[connection signal="body_entered" from="AreaCámara3" to="AreaCámara3" method="_on_body_entered"]
+[connection signal="body_entered" from="AreaCámara4" to="AreaCámara4" method="_on_body_entered"]
 [connection signal="body_entered" from="AreaCámara1" to="AreaCámara1" method="_on_body_entered"]
 
 [editable path="Main_character"]
