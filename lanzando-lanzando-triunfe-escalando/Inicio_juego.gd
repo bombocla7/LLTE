@@ -8,7 +8,6 @@ extends Control
 
 func _on_jugar_pressed() -> void:
 	get_tree().change_scene_to_file(ruta)
-	audio_stream_player_2d.play(0.0)
 
 
 

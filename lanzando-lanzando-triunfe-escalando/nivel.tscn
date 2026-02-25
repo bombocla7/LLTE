@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://bi16ehllhhapd"]
+[gd_scene load_steps=29 format=3 uid="uid://bi16ehllhhapd"]
 
 [ext_resource type="Texture2D" uid="uid://c5jiwejblv884" path="res://Assets/fondos_assets_png/ad4f0766-1.png" id="1_e70fy"]
 [ext_resource type="PackedScene" uid="uid://cbeeammrc8nj5" path="res://main_character.tscn" id="1_h06de"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://db1mubmm0c054" path="res://Assets/arco.png" id="7_6apml"]
 [ext_resource type="Script" uid="uid://0wdjm7dv6vs3" path="res://area_cámara.gd" id="8_d04yg"]
 [ext_resource type="PackedScene" uid="uid://klisu4gm2a4u" path="res://pin.tscn" id="8_l1yqx"]
+[ext_resource type="PackedScene" uid="uid://brmngy8vd7wwt" path="res://audio_stream_player_2d.tscn" id="15_8a6d0"]
 [ext_resource type="PackedScene" uid="uid://pvihsw664uru" path="res://escenas plataformas/plataforma mina.tscn" id="17_bcau2"]
 [ext_resource type="Script" uid="uid://cfk68jsf6afvn" path="res://area_final.gd" id="17_e7jer"]
 [ext_resource type="PackedScene" uid="uid://dnbi1kvr5fvlm" path="res://escenas plataformas/plataforma_cueva.tscn" id="18_sye3q"]
@@ -54,6 +55,8 @@ animations = [{
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_e7jer"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_bcau2"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8a6d0"]
 
 [node name="Nivel" type="Node2D"]
 
@@ -117,7 +120,7 @@ position = Vector2(-1, 19)
 shape = SubResource("WorldBoundaryShape2D_sdrig")
 
 [node name="Main_character" parent="." instance=ExtResource("1_h06de")]
-position = Vector2(-6, 251)
+position = Vector2(-8, 240)
 eslabonL_scene = ExtResource("5_l1yqx")
 eslabonS_scene = ExtResource("6_1il4o")
 joint_scene = ExtResource("8_l1yqx")
@@ -141,6 +144,10 @@ position = Vector2(-4, -3)
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Main_character/Area2D2"]
 position = Vector2(-1, 19)
 shape = SubResource("WorldBoundaryShape2D_sdrig")
+
+[node name="AudioStreamPlayer2D" parent="Main_character" instance=ExtResource("15_8a6d0")]
+volume_db = 6.446
+autoplay = true
 
 [node name="AreaCámara2" type="Area2D" parent="."]
 visible = false
@@ -430,6 +437,13 @@ position = Vector2(-488, -1098)
 rotation = 0.553357
 scale = Vector2(14.9495, -11.9361)
 shape = SubResource("SegmentShape2D_bcau2")
+
+[node name="Si" type="StaticBody2D" parent="paredes"]
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="paredes/Si"]
+position = Vector2(-134, 665)
+scale = Vector2(19.9782, 40.158)
+shape = SubResource("WorldBoundaryShape2D_8a6d0")
 
 [connection signal="body_entered" from="AreaCámara2" to="AreaCámara2" method="_on_body_entered"]
 [connection signal="body_entered" from="AreaCámara3" to="AreaCámara3" method="_on_body_entered"]

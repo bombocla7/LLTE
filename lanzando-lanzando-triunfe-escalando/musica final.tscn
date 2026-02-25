@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bpwqqc3oi0a4u"]
+
+[ext_resource type="AudioStream" uid="uid://dtuxl5q35dqb2" path="res://Assets/musica-thegrefg-epica.mp3" id="1_68hlq"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_68hlq")
+volume_db = 4.952
+autoplay = true

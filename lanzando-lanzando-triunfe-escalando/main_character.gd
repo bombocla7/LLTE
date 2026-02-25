@@ -113,16 +113,22 @@ func on_flecha_choca():
 	trepar = true
 	ult_eslabon.set_freeze_enabled(true)
 	var joint = joint_scene.instantiate()
-	self.add_child(joint)
-	joint.set_node_a(self.get_path())
-	joint.set_node_b(ult_eslabon.get_path())
-	joint.set_exclude_nodes_from_collision(true)
-	joint.global_position = global_position
-	primer_eslabon.global_position = flechaP.global_position
+	if joint != null:
+		self.add_child(joint)
+		joint.set_node_a(self.get_path())
+		joint.set_node_b(ult_eslabon.get_path())
+		joint.set_exclude_nodes_from_collision(true)
+		joint.global_position = global_position
+		if primer_eslabon != null:
+			primer_eslabon.global_position = flechaP.global_position
 	
 func acccion_trepar(delta):
+	self.set_collision_mask_value(1,false)
 	velocidad_trepado += delta * 0.4
 	global_position = global_position.lerp(flechaP.global_position, velocidad_trepado)
 	var posicion_final = (global_position - flechaP.global_position);
 	if(posicion_final.y <= 10 and posicion_final.x <= 10):
+		self.position.y += -10
+		self.set_collision_mask_value(1,true)
+		velocidad_trepado = 0
 		trepar = false

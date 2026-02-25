@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://t0bihuo03xhg"]
+[gd_scene load_steps=5 format=3 uid="uid://t0bihuo03xhg"]
 
 [ext_resource type="FontFile" uid="uid://xapx6rr7jmfr" path="res://Assets/Fonts/enchanted_land/Enchanted Land.otf" id="1_h0aww"]
 [ext_resource type="Script" uid="uid://bp15upscl6mhl" path="res://canvas_layer.gd" id="1_tvybu"]
+[ext_resource type="PackedScene" uid="uid://bpwqqc3oi0a4u" path="res://musica final.tscn" id="3_7678y"]
+[ext_resource type="Texture2D" uid="uid://byrm3uopaxhe3" path="res://Assets/pngwing.com.png" id="3_qt6nr"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -14,21 +16,38 @@ grow_vertical = 2
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 script = ExtResource("1_tvybu")
 
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+offset_left = 411.0
+offset_top = 36.0
+offset_right = 1435.0
+offset_bottom = 1443.0
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("3_qt6nr")
+
+[node name="AudioStreamPlayer2D" parent="CanvasLayer/TextureRect" instance=ExtResource("3_7678y")]
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -1024.0
+offset_bottom = 1407.0
+grow_horizontal = 0
+
 [node name="Label" type="Label" parent="CanvasLayer"]
-offset_left = 269.0
-offset_top = 182.0
-offset_right = 680.0
-offset_bottom = 334.0
+offset_left = 78.0
+offset_top = 150.0
+offset_right = 546.0
+offset_bottom = 302.0
 theme_override_fonts/font = ExtResource("1_h0aww")
 theme_override_font_sizes/font_size = 130
 text = "Has ganado..."
 
-[node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_left = 274.0
-offset_top = 371.0
-offset_right = 398.0
-offset_bottom = 407.0
+[node name="Label2" type="Label" parent="CanvasLayer"]
+offset_left = 221.0
+offset_top = 332.0
+offset_right = 345.0
+offset_bottom = 368.0
 theme_override_fonts/font = ExtResource("1_h0aww")
 theme_override_font_sizes/font_size = 30
 text = "Enter para salir"
